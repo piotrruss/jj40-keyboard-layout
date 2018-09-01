@@ -41,20 +41,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * | Stop | RGB_T| RGB_M|  (   |   )  |      |      |      |      |      |      | INSRT|
+ * |      | GUI+1| GUI+2| GUI+3| GUI+4| GUI+5| GUI+6| GUI+7| GUI+8|	GUI+9| GUI+0| INSRT|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Play | Vol+ | Next |  [   |   ]  |      | Left | Down |  Up  |Right | PGUP | HOME |
+ * | Stop | Vol+ | Next |  [   |   (  |   {  | Left | Down |  Up  |Right | PGUP | HOME |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift| Vol- | Prev |  {   |   }  |      |   0  |   ^  |   %  |   $  | PGDN | END  |
+ * |Play/S| Vol- | Prev |  ]   |   )  |   }  |   0  |   ^  |   %  |   $  | PGDN | END  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl | Mute | Alt  | GUI  |Lower |      |      |Raise | LED  |LED_i |LED_d |PRNSCR|
+ * | Ctrl | Mute | Alt  | GUI  |Lower | RGB_T| RGB_M|Raise | LED  |LED_i |LED_d |PRNSCR|
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_ortho_4x12( \
-  KC_MSTP, RGB_TOG,  RGB_MOD,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,  KC_INS, \
-  KC_MPLY, KC_VOLU,  KC_MNXT,  KC_LBRC,  KC_RBRC,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_PGUP,  KC_HOME, \
-  KC_LSFT, KC_VOLD,  KC_MPRV,  KC_LCBR,  KC_RCBR,  _______,  KC_0,     KC_CIRC,  KC_PERC,  KC_DLR,   KC_PGDN,  KC_END, \
-  KC_LCTL, KC_MUTE,  KC_LALT,  KC_LGUI,  _______,  _______,  _______,  _______,  BL_TOGG,  BL_INC,   BL_DEC,   KC_PSCR \
+  _______, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), LGUI(KC_0), KC_INS, \
+  KC_MSTP, KC_VOLU,  KC_MNXT,  KC_LBRC,  KC_LPRN,  KC_LCBR,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_PGUP,  KC_HOME, \
+  LSFT_T(KC_MPLY), KC_VOLD, KC_MPRV, KC_RBRC, KC_RPRN, KC_RCBR,  KC_0, KC_CIRC,  KC_PERC,  KC_DLR,   KC_PGDN,  KC_END, \
+  KC_LCTL, KC_MUTE,  KC_LALT,  KC_LGUI,  _______,  RGB_TOG,  RGB_MOD,  _______,  BL_TOGG,  BL_INC,   BL_DEC,   KC_PSCR \
 ),
 
 /* Rise
